@@ -1,0 +1,3 @@
+Expr -> Expr '+' MulExpr | MulExpr.
+MulExpr -> MulExpr '*' GrpExpr | GrpExpr.
+GrpExpr -> '(' Expr ')' | 'a' | Hello.
