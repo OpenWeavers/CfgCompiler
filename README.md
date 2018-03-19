@@ -21,3 +21,10 @@ Output is a Object Containing CFG `G(V,T,P,S)`.
         defaultdict(<class 'list'>, {'Expr': [['Expr', "'+'", 'MulExpr'], ['MulExpr']], 'MulExpr': [['MulExpr', "'*'", 'GrpExpr'], ['GrpExpr']], 'GrpExpr': [["'('", 'Expr', "')'"], ["'a'"], ['Hello']]})
         Expr
 
+# Parse Tree
+Currently, LISP Style Parse Trees are supported
+
+*TODO* : Graphviz dot output of parse tree
+
+        (prog (production (head Expr) - > (body (ele Expr) (ele '+') (ele MulExpr)) | (body (ele MulExpr)) .) \n (production (head MulExpr) - > (body (ele MulExpr) (ele '*') (ele GrpExpr)) | (body (ele GrpExpr)) .) \n (production (head GrpExpr) - > (body (ele '(') (ele Expr) (ele ')')) | (body (ele 'a')) | (body (ele Hello)) .))
+
